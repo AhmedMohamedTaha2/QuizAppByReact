@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the most popular library for building user interfaces in JavaScript?",
+      "options": ["Angular", "Vue", "React", "Svelte"],
+      "answer": 2,
+      "points": 10
+    },
+    {
+      "id": 2,
+      "question": "Which React Hook is used to manage state in Functional Components?",
+      "options": ["useEffect", "useState", "useContext", "useReducer"],
+      "answer": 1,
+      "points": 10
+    },
+    {
+      "id": 3,
+      "question": "What does JSX stand for?",
+      "options": ["JavaScript XML", "JavaScript Syntax", "JSON Syntax Extension", "Java Standard Extension"],
+      "answer": 0,
+      "points": 10
+    },
+    {
+      "id": 4,
+      "question": "How do you pass data from a parent component to a child component in React?",
+      "options": ["Using state", "Using Redux", "Using props", "Using context"],
+      "answer": 2,
+      "points": 10
+    },
+    {
+      "id": 5,
+      "question": "Which Hook allows you to perform side effects in React components?",
+      "options": ["useState", "useRef", "useMemo", "useEffect"],
+      "answer": 3,
+      "points": 15
+    },
+    {
+      "id": 6,
+      "question": "What is the purpose of the `key` prop when rendering a list of elements?",
+      "options": [
+        "It is a unique identifier for the element in the DOM",
+        "It helps React identify which items have changed, are added, or are removed",
+        "It is used for styling purposes",
+        "It is required for all elements"
+      ],
+      "answer": 1,
+      "points": 20
+    },
+    {
+      "id": 7,
+      "question": "What is a common way to perform conditional rendering in React?",
+      "options": ["Using a switch statement", "Using an if-else statement inside JSX", "Using the ternary operator", "Using a for loop"],
+      "answer": 2,
+      "points": 10
+    },
+    {
+      "id": 8,
+      "question": "Which hook is used to consume a context value without a <Context.Consumer> component?",
+      "options": ["useContext", "useState", "useProvider", "useValue"],
+      "answer": 0,
+      "points": 15
+    },
+    {
+      "id": 9,
+      "question": "When is `useReducer` generally preferred over `useState`?",
+      "options": [
+        "For simple state like a boolean or number",
+        "When you never need to update the state",
+        "For complex state logic or when the next state depends on the previous one",
+        "When the state is passed from a parent"
+      ],
+      "answer": 2,
+      "points": 20
+    },
+    {
+      "id": 10,
+      "question": "What is a primary use case for the `useRef` hook?",
+      "options": ["To manage component state", "To access a DOM element directly", "To create a memoized function", "To perform side effects"],
+      "answer": 1,
+      "points": 15
+    },
+    {
+      "id": 11,
+      "question": "What is the main purpose of `React.memo`?",
+      "options": [
+        "To memorize API calls",
+        "It's a Hook that manages memory leaks",
+        "It's a Higher-Order Component that prevents re-rendering if props are the same",
+        "To create a memoized value"
+      ],
+      "answer": 2,
+      "points": 20
+    },
+    {
+      "id": 12,
+      "question": "How can you render a component without adding an extra node to the DOM?",
+      "options": ["Using a <span>", "Using React.Fragment or <>", "Using a custom wrapper", "It's not possible"],
+      "answer": 1,
+      "points": 10
+    },
+    {
+      "id": 13,
+      "question": "How do you update the state in a Class Component?",
+      "options": ["this.state = {}", "this.updateState()", "this.setState()", "this.changeState()"],
+      "answer": 2,
+      "points": 10
+    },
+    {
+      "id": 14,
+      "question": "What is the Virtual DOM?",
+      "options": [
+        "A direct copy of the HTML DOM",
+        "A server-side representation of the DOM",
+        "A JavaScript object that is an in-memory representation of the real DOM",
+        "A tool for debugging React components"
+      ],
+      "answer": 2,
+      "points": 15
+    },
+    {
+      "id": 15,
+      "question": "In React Router v6, which hook is used to navigate programmatically?",
+      "options": ["<Link>", "useNavigate()", "useHistory()", "The <Navigate> component"],
+      "answer": 1,
+      "points": 15
+    },
+    {
+      "id": 16,
+      "question": "How do you perform a cleanup action in `useEffect` for things like subscriptions?",
+      "options": [
+        "Call a `cleanup()` function at the end",
+        "React handles it automatically",
+        "By returning a function from the effect's callback",
+        "Use a `try...finally` block"
+      ],
+      "answer": 2,
+      "points": 20
+    },
+    {
+      "id": 17,
+      "question": "What is a Higher-Order Component (HOC) in React?",
+      "options": [
+        "A component that is visually superior to others",
+        "A function that takes a component and returns a new, enhanced component",
+        "A built-in React Hook for performance",
+        "A parent component with many children"
+      ],
+      "answer": 1,
+      "points": 20
+    },
+    {
+      "id": 18,
+      "question": "What defines a 'controlled component' in React forms?",
+      "options": [
+        "A component that cannot be changed by the user",
+        "An input form element whose value is controlled by React state",
+        "A component that has strict type checking",
+        "A component that controls other components"
+      ],
+      "answer": 1,
+      "points": 15
+    },
+    {
+      "id": 19,
+      "question": "Which of these is NOT a core concept of Redux?",
+      "options": ["Store", "Actions", "Reducers", "Components"],
+      "answer": 3,
+      "points": 10
+    },
+    {
+      "id": 20,
+      "question": "What is the purpose of the `useCallback` hook?",
+      "options": [
+        "To return a memoized value",
+        "To call a function after a specified delay",
+        "To return a memoized version of a callback function",
+        "To create a reference to a callback"
+      ],
+      "answer": 2,
+      "points": 20
+    }
+  ]
+}

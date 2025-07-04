@@ -1,0 +1,48 @@
+@import "tailwindcss";
+/* Remove default margin and padding from body and #root */
+
+body, #root {
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none;
+}
+
+#root {
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  /* Remove padding from .card */
+  padding: 0 !important;
+}
+
+.read-the-docs {
+  color: #888;
+}
