@@ -8,6 +8,7 @@ import NavbarComponent from "./Components/NavbarComponent";
 import ResultComponent from "./Components/ResultComponent";
 import ShowingAnswers from "./Components/ShowingAnswers";
 import FooterComponent from "./Components/FooterComponent";
+import questionsData from "./assets/questions.json";
 
 const initialState = {
   questions: [],
@@ -135,17 +136,8 @@ function App() {
 
   useEffect(() => {
     if (status === "loading") {
-      // Fetch questions from the JSON server
-      fetch("http://localhost:3001/questions")
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Fetched questions:", data);
-          dispatch({ type: "dataRecived", payload: data });
-        })
-        .catch((error) => {
-          console.error("Error fetching questions:", error);
-          dispatch({ type: "error", payload: error });
-        });
+      // Use statically imported questions data
+      dispatch({ type: "dataRecived", payload: questionsData.questions });
     }
   }, [status]);
 
