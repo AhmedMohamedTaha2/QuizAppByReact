@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-export default function QuestionComponent({ dispatch, question, noQuestions }) {
+export default function QuestionComponent({
+  dispatch,
+  question,
+  noQuestions,
+  currentQuestionIndex,
+}) {
   const [selected, setSelected] = useState(null);
   const [showResult, setShowResult] = useState(false);
 
@@ -24,7 +29,7 @@ export default function QuestionComponent({ dispatch, question, noQuestions }) {
         setSelected(null);
         setShowResult(false);
 
-        if (Number(question.id) === Number(noQuestions)) {
+        if (Number(currentQuestionIndex + 1) === Number(noQuestions)) {
           dispatch({
             type: "FINISH_QUIZ",
           });
@@ -39,7 +44,9 @@ export default function QuestionComponent({ dispatch, question, noQuestions }) {
         <div className="w-full flex flex-col sm:flex-row items-center justify-between mb-2 gap-2">
           <p className="text-base sm:text-lg md:text-xl font-semibold text-white tracking-wide drop-shadow flex-1 text-center sm:text-left">
             Question
-            <span className="text-blue-400 font-bold ml-2">{question.id}</span>
+            <span className="text-blue-400 font-bold ml-2">
+              {currentQuestionIndex + 1}
+            </span>
             <span className="text-white/70 font-medium">/ {noQuestions}</span>
           </p>
           <div className="flex items-center gap-2 justify-center sm:justify-end">
@@ -110,7 +117,7 @@ export default function QuestionComponent({ dispatch, question, noQuestions }) {
             disabled={selected === null || showResult}
             onClick={() => handleSubmit()}
           >
-            {Number(question.id) === Number(noQuestions)
+            {Number(currentQuestionIndex + 1) === Number(noQuestions)
               ? "Finish Quiz"
               : "Submit Answer"}
           </button>

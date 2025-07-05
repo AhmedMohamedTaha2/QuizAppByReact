@@ -9,6 +9,7 @@ import ResultComponent from "./Components/ResultComponent";
 import ShowingAnswers from "./Components/ShowingAnswers";
 import FooterComponent from "./Components/FooterComponent";
 import questionsData from "./assets/questions.json";
+import { randomizeQuiz } from "./utils/randomization";
 
 const initialState = {
   questions: [],
@@ -32,18 +33,21 @@ function reducer(state, action) {
       };
     }
     case "dataRecived": {
+      // Randomize the questions and their options
+      const randomizedQuestions = randomizeQuiz(action.payload);
+
       return {
         ...state,
-        questions: action.payload,
+        questions: randomizedQuestions,
         status: "active",
-        noQuestions: action.payload.length,
-        maxScore: action.payload.reduce((acc, curr) => {
+        noQuestions: randomizedQuestions.length,
+        maxScore: randomizedQuestions.reduce((acc, curr) => {
           return acc + curr.points;
         }, 0),
         currentQuestion: 0, // <-- Fix: start from the first question
         selectedAnswers: [],
         score: 0,
-        timer: action.payload.length * 80,
+        timer: randomizedQuestions.length * 80,
       };
     }
     case "error": {
@@ -160,6 +164,7 @@ function App() {
           <QuestionComponent
             noQuestions={noQuestions}
             question={questions[currentQuestion]}
+            currentQuestionIndex={currentQuestion}
             dispatch={dispatch}
             score={score}
             maxScore={maxScore}
